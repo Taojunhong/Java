@@ -24,14 +24,14 @@ public class Stu_manage {
 	}
 
 	public void menu() {
-		System.out.println("»¶Ó­µÇÈëÑ§Éúµµ°¸¹ÜÀíÏµÍ³");
-		System.out.println("1--Â¼ÈëÑ§ÉúĞÅÏ¢");
-		System.out.println("2--²éÑ¯ËùÓĞÑ§ÉúĞÅÏ¢");
-		System.out.println("3--ĞŞ¸ÄÄ³Î»Ñ§ÉúĞÅÏ¢");
-		System.out.println("4--É¾³ıÄ³Î»Ñ§ÉúĞÅÏ¢");
-		System.out.println("5--Ôö¼ÓÄ³Î»Ñ§ÉúĞÅÏ¢");
-		System.out.println("6--²éÑ¯Ä³Î»Ñ§ÉúĞÅÏ¢");
-		System.out.println("7--ÍË³ö");
+		System.out.println("ï¿½ï¿½Ó­ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³");
+		System.out.println("1--Â¼ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢");
+		System.out.println("2--ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢");
+		System.out.println("3--ï¿½Ş¸ï¿½Ä³Î»Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢");
+		System.out.println("4--É¾ï¿½ï¿½Ä³Î»Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢");
+		System.out.println("5--ï¿½ï¿½ï¿½ï¿½Ä³Î»Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢");
+		System.out.println("6--ï¿½ï¿½Ñ¯Ä³Î»Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢");
+		System.out.println("7--ï¿½Ë³ï¿½");
 	}
 
 	public void luru() {
@@ -68,26 +68,26 @@ public class Stu_manage {
 		Scanner src = new Scanner(System.in);
 		int s;
 		String q;
-		System.out.println("ÇëÏÈµÇÈëÏµÍ³");
-		System.out.println("1--Ñ§ÉúµÇÂ¼            2--½ÌÊ¦µÇÂ¼");
+		System.out.println("ï¿½ï¿½ï¿½Èµï¿½ï¿½ï¿½ÏµÍ³");
+		System.out.println("1--Ñ§ï¿½ï¿½ï¿½ï¿½Â¼            2--ï¿½ï¿½Ê¦ï¿½ï¿½Â¼");
 		s = src.nextInt();
 		if (s == 1) {
-			System.out.println("ÇëÊäÈëÃÜÂë£º (xuesheng)");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£º (xuesheng)");
 			q = src.next();
 			if (q.equals("xuesheng")) {
-				zhixing();// Ö´ĞĞ
+				zhixing();// Ö´ï¿½ï¿½
 			} else {
-				System.out.println("ÇëÈ·ÈÏºóÖØĞÂµÇÈë£¡£¡£¡");
+				System.out.println("ï¿½ï¿½È·ï¿½Ïºï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ë£¡ï¿½ï¿½ï¿½ï¿½");
 				denglu();
 			}
 		} else {
 			if (s == 2) {
-				System.out.println("ÇëÊäÈëÃÜÂë£º  (jiaoshi)");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£º  (jiaoshi)");
 				q = src.next();
 				if (q.equals("jiaoshi")) {
-					zhixing();// Ö´ĞĞ
+					zhixing();// Ö´ï¿½ï¿½
 				} else {
-					System.out.println("ÇëÈ·ÈÏºóÖØĞÂµÇÈë£¡£¡£¡");
+					System.out.println("ï¿½ï¿½È·ï¿½Ïºï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ë£¡ï¿½ï¿½ï¿½ï¿½");
 					denglu();
 				}
 			}
@@ -103,43 +103,43 @@ public class Stu_manage {
 			switch (t) {
 			case 0:
 				guanli.menu();
-				System.out.println("ÇëÊäÈëÏàÓ¦µÄ±àºÅÍê³É²Ù×÷£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä±ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½ï¿½");
 				t = src.nextInt();
 				break;
 			case 1:
 				guanli.luru();
 				guanli.menu();
-				System.out.println("ÇëÊäÈëÏàÓ¦µÄ±àºÅÍê³É²Ù×÷£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä±ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½ï¿½");
 				t = src.nextInt();
 				break;
 			case 2:
 				guanli.chaxun();
 				guanli.menu();
-				System.out.println("ÇëÊäÈëÏàÓ¦µÄ±àºÅÍê³É²Ù×÷£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä±ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½ï¿½");
 				t = src.nextInt();
 				break;
 			case 3:
 				guanli.xiugai();
 				guanli.menu();
-				System.out.println("ÇëÊäÈëÏàÓ¦µÄ±àºÅÍê³É²Ù×÷£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä±ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½ï¿½");
 				t = src.nextInt();
 				break;
 			case 4:
 				guanli.shanchu();
 				guanli.menu();
-				System.out.println("ÇëÊäÈëÏàÓ¦µÄ±àºÅÍê³É²Ù×÷£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä±ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½ï¿½");
 				t = src.nextInt();
 				break;
 			case 5:
 				guanli.zengjia();
 				guanli.menu();
-				System.out.println("ÇëÊäÈëÏàÓ¦µÄ±àºÅÍê³É²Ù×÷£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä±ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½ï¿½");
 				t = src.nextInt();
 				break;
 			case 6:
 				guanli.chaxun1();
 				guanli.menu();
-				System.out.println("ÇëÊäÈëÏàÓ¦µÄ±àºÅÍê³É²Ù×÷£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä±ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½ï¿½");
 				t = src.nextInt();
 				break;
 			case 7:
@@ -157,29 +157,29 @@ public class Stu_manage {
 
 		public void luru() {
 			int r;
-			System.out.println("ÇëÊäÈëÔ­Ê¼Ñ§ÉúÈËÊı£º");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­Ê¼Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			r = src.nextInt();
 			i = r;
 			for (int t = 0; t < i; t++) {
-				System.out.println("ÇëÊäÈëÑ§ÉúĞÕÃû£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 				N[t] = name[t] = src.next();
-				System.out.println("ÇëÊäÈëÑ§ÉúÑ§ºÅ£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½Ñ§ï¿½Å£ï¿½");
 				I[t] = id[t] = src.next();
-				System.out.println("ÇëÊäÈëÑ§ÉúĞÔ±ğ£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½Ô±ï¿½");
 				S[t] = sex[t] = src.next();
-				System.out.println("ÇëÊäÈëÑ§ÉúÄêÁä£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ä£º");
 				A[t] = age[t] = src.nextInt();
-				System.out.println("ÇëÊäÈëÑ§Éú×¨Òµ°à¼¶£º");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½×¨Òµï¿½à¼¶ï¿½ï¿½");
 				Z[t] = zybj[t] = src.next();
-				System.out.println("ÓïÎÄ³É¼¨£º");
+				System.out.println("ï¿½ï¿½ï¿½Ä³É¼ï¿½ï¿½ï¿½");
 				C[t] = chinese[t] = src.nextInt();
-				System.out.println("ÊıÑ§³É¼¨£º");
+				System.out.println("ï¿½ï¿½Ñ§ï¿½É¼ï¿½ï¿½ï¿½");
 				M[t] = math[t] = src.nextInt();
-				System.out.println("Ó¢Óï³É¼¨£º");
+				System.out.println("Ó¢ï¿½ï¿½É¼ï¿½ï¿½ï¿½");
 				E[t] = english[t] = src.nextInt();
 
 			}
-			System.out.println("²Ù×÷³É¹¦£¡");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 			System.out.println("---------------------------");
 
 		}
@@ -188,30 +188,30 @@ public class Stu_manage {
 			int f;
 			i = i + 1;
 			f = i - 1;
-			System.out.println("ÇëÊäÈëÑ§ÉúĞÕÃû£º");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			N[f] = name[f] = src.next();
-			System.out.println("ÇëÊäÈëÑ§ÉúÑ§ºÅ£º");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½Ñ§ï¿½Å£ï¿½");
 			I[f] = id[f] = src.next();
-			System.out.println("ÇëÊäÈëÑ§ÉúĞÔ±ğ£º");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½Ô±ï¿½");
 			S[f] = sex[f] = src.next();
-			System.out.println("ÇëÊäÈëÑ§ÉúÄêÁä£º");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ä£º");
 			A[f] = age[f] = src.nextInt();
-			System.out.println("ÇëÊäÈëÑ§Éú×¨Òµ°à¼¶£º");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½×¨Òµï¿½à¼¶ï¿½ï¿½");
 			Z[f] = zybj[f] = src.next();
-			System.out.println("ÓïÎÄ³É¼¨£º");
+			System.out.println("ï¿½ï¿½ï¿½Ä³É¼ï¿½ï¿½ï¿½");
 			C[f] = chinese[f] = src.nextInt();
-			System.out.println("ÊıÑ§³É¼¨£º");
+			System.out.println("ï¿½ï¿½Ñ§ï¿½É¼ï¿½ï¿½ï¿½");
 			M[f] = math[f] = src.nextInt();
-			System.out.println("Ó¢Óï³É¼¨£º");
+			System.out.println("Ó¢ï¿½ï¿½É¼ï¿½ï¿½ï¿½");
 			E[f] = english[f] = src.nextInt();
-			System.out.println("²Ù×÷³É¹¦£¡");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 			System.out.println("---------------------------");
 		}
 
 		public void shanchu() {
 			String m;
 			int s;
-			System.out.println("ÇëÊäÈëÄúÒªÉ¾³ıµÄ Ñ§ÉúµÄÑ§ºÅ£º");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½ï¿½ Ñ§ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½Å£ï¿½");
 			m = src.next();
 			for (s = 0; s < i; s++) {
 				if (m.equals(I[s])) {
@@ -236,26 +236,26 @@ public class Stu_manage {
 					i = i - 1;
 				}
 			}
-			System.out.println("²Ù×÷³É¹¦£¡");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 			System.out.println("---------------------------");
 		}
 
 		public void chaxun1() {
 			String m;
 			int s;
-			System.out.println("ÇëÊäÈëÄúÒª²éÑ¯µÄÑ§ÉúµÄÑ§ºÅ£º");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ñ¯ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½Å£ï¿½");
 			m = src.next();
 			for (s = 0; s < i; s++) {
 				if (m.equals(I[s])) {
-					System.out.println("Ñ§ÉúĞÕÃû£º" + N[s]);
-					System.out.println("Ñ§ÉúÑ§ºÅ£º" + I[s]);
-					System.out.println("Ñ§ÉúĞÔ±ğ£º" + S[s]);
-					System.out.println("Ñ§ÉúÄêÁä£º" + A[s]);
-					System.out.println("Ñ§Éú×¨Òµ°à¼¶£º" + Z[s]);
-					System.out.println("ÓïÎÄ³É¼¨£º" + C[s]);
-					System.out.println("ÊıÑ§³É¼¨£º" + M[s]);
-					System.out.println("Ó¢Óï³É¼¨£º" + E[s]);
-					System.out.println("²Ù×÷³É¹¦£¡");
+					System.out.println("Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + N[s]);
+					System.out.println("Ñ§ï¿½ï¿½Ñ§ï¿½Å£ï¿½" + I[s]);
+					System.out.println("Ñ§ï¿½ï¿½ï¿½Ô±ï¿½" + S[s]);
+					System.out.println("Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ä£º" + A[s]);
+					System.out.println("Ñ§ï¿½ï¿½×¨Òµï¿½à¼¶ï¿½ï¿½" + Z[s]);
+					System.out.println("ï¿½ï¿½ï¿½Ä³É¼ï¿½ï¿½ï¿½" + C[s]);
+					System.out.println("ï¿½ï¿½Ñ§ï¿½É¼ï¿½ï¿½ï¿½" + M[s]);
+					System.out.println("Ó¢ï¿½ï¿½É¼ï¿½ï¿½ï¿½" + E[s]);
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 					System.out.println("---------------------------");
 
 				}
@@ -265,44 +265,44 @@ public class Stu_manage {
 		public void xiugai() {
 			String n;
 			int s;
-			System.out.println("ÇëÊäÈëÄúÒªĞŞ¸ÄµÄÑ§ÉúµÄÑ§ºÅ£º");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ş¸Äµï¿½Ñ§ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½Å£ï¿½");
 			n = src.next();
 			for (s = 0; s < i; s++) {
 				if (n.equals(I[s])) {
-					System.out.println("ÇëÊäÈëÑ§ÉúĞÕÃû£º");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 					N[s] = name[s] = src.next();
-					System.out.println("ÇëÊäÈëÑ§ÉúÑ§ºÅ£º");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½Ñ§ï¿½Å£ï¿½");
 					I[s] = id[s] = src.next();
-					System.out.println("ÇëÊäÈëÑ§ÉúĞÔ±ğ£º");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½Ô±ï¿½");
 					S[s] = sex[s] = src.next();
-					System.out.println("ÇëÊäÈëÑ§ÉúÄêÁä£º");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ä£º");
 					A[s] = age[s] = src.nextInt();
-					System.out.println("ÇëÊäÈëÑ§Éú×¨Òµ°à¼¶£º");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½×¨Òµï¿½à¼¶ï¿½ï¿½");
 					Z[s] = zybj[s] = src.next();
-					System.out.println("ÓïÎÄ³É¼¨£º");
+					System.out.println("ï¿½ï¿½ï¿½Ä³É¼ï¿½ï¿½ï¿½");
 					C[s] = chinese[s] = src.nextInt();
-					System.out.println("ÊıÑ§³É¼¨£º");
+					System.out.println("ï¿½ï¿½Ñ§ï¿½É¼ï¿½ï¿½ï¿½");
 					M[s] = math[s] = src.nextInt();
-					System.out.println("Ó¢Óï³É¼¨£º");
+					System.out.println("Ó¢ï¿½ï¿½É¼ï¿½ï¿½ï¿½");
 					E[s] = english[s] = src.nextInt();
 				}
 			}
-			System.out.println("²Ù×÷³É¹¦£¡");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 			System.out.println("---------------------------");
 		}
 
 		public void chaxun() {
 			for (int y = 0; y < i; y++) {
-				System.out.println("Ñ§ÉúĞÕÃû£º" + N[y]);
-				System.out.println("Ñ§ÉúÑ§ºÅ£º" + I[y]);
-				System.out.println("Ñ§ÉúĞÔ±ğ£º" + S[y]);
-				System.out.println("Ñ§ÉúÄêÁä£º" + A[y]);
-				System.out.println("Ñ§Éú×¨Òµ°à¼¶£º" + Z[y]);
-				System.out.println("ÓïÎÄ³É¼¨£º" + C[y]);
-				System.out.println("ÊıÑ§³É¼¨£º" + M[y]);
-				System.out.println("Ó¢Óï³É¼¨£º" + E[y]);
+				System.out.println("Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + N[y]);
+				System.out.println("Ñ§ï¿½ï¿½Ñ§ï¿½Å£ï¿½" + I[y]);
+				System.out.println("Ñ§ï¿½ï¿½ï¿½Ô±ï¿½" + S[y]);
+				System.out.println("Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ä£º" + A[y]);
+				System.out.println("Ñ§ï¿½ï¿½×¨Òµï¿½à¼¶ï¿½ï¿½" + Z[y]);
+				System.out.println("ï¿½ï¿½ï¿½Ä³É¼ï¿½ï¿½ï¿½" + C[y]);
+				System.out.println("ï¿½ï¿½Ñ§ï¿½É¼ï¿½ï¿½ï¿½" + M[y]);
+				System.out.println("Ó¢ï¿½ï¿½É¼ï¿½ï¿½ï¿½" + E[y]);
 			}
-			System.out.println("²Ù×÷³É¹¦£¡");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 			System.out.println("---------------------------");
 		}
 	}
