@@ -6,11 +6,11 @@ public class Pyramid {
 
 	public static void main(String[] args) {
 		Scanner in =new Scanner(System.in);
-		System.out.println("ÕâÊÇÒ»¸öÕıÔÚ´´½¨µÄPyramid£¡£¡£¡");
+		System.out.println("è¿™æ˜¯ä¸€ä¸ªæ­£åœ¨åˆ›å»ºçš„Pyramidï¼ï¼ï¼");
 		System.out.println("------------------------------");
-		System.out.println("ÇëÊäÈëPyramidµÄ²ãÊı£º");
+		System.out.println("è¯·è¾“å…¥Pyramidçš„å±‚æ•°ï¼š");
 		int cnt=in.nextInt();
-		System.out.println("ÇëÊäÈëPyramidµÄ×é³ÉÔªËØ£º");
+		System.out.println("è¯·è¾“å…¥Pyramidçš„ç»„æˆå…ƒç´ ï¼š");
 		String str=in.next();
 		Pyramid py=new Pyramid();
 		py.show(cnt,str);

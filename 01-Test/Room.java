@@ -1,67 +1,78 @@
 package myselfgame;
 
+import java.util.HashMap;
+
 public class Room {
 	private String description;
-	private Room northExit;
-	private Room southExit;
-	private Room eastExit;
-	private Room westExit;
+	private HashMap<String,Room> exits=new HashMap<String,Room>();
+//	private Room northExit;
+//	private Room southExit;
+//	private Room eastExit;
+//	private Room westExit;
 
 	public Room(String description) {
 		this.description = description;
 	}
 
-	// ÅĞ¶Ï³ö¿ÚµÄº¯Êı
-	public void setExits(Room north, Room south, Room east, Room west) {// ±± ÄÏ ¶«
-																		// Î÷
-		if (north != null)
-			northExit = north;
-		if (east != null)
-			eastExit = east;
-		if (south != null)
-			southExit = south;
-		if (west != null)
-			westExit = west;
-
+	public void setExit(String dir,Room room){
+		exits.put(dir, room);
 	}
+	// åˆ¤æ–­å‡ºå£çš„å‡½æ•°
+//	public void setExits(Room north, Room south, Room east, Room west) {// åŒ— å— ä¸œ
+//																		// è¥¿
+//		if (north != null)
+//			northExit = north;
+//		if (east != null)
+//			eastExit = east;
+//		if (south != null)
+//			southExit = south;
+//		if (west != null)
+//			westExit = west;
+//
+//	}
 
-	// ÓÃtoString·½·¨Êä³öÓĞ³ö¿ÚµÄ·½Ïò×Ö·ûµÄº¯Êı
+	// ç”¨toStringæ–¹æ³•è¾“å‡ºæœ‰å‡ºå£çš„æ–¹å‘å­—ç¬¦çš„å‡½æ•°
 	public String getExitdesc() {
 		StringBuffer sb = new StringBuffer();
-		if (northExit != null) {
-			sb.append("north  ");
+		for(String dir:exits.keySet()){
+			sb.append(dir);
+			sb.append(' ');
 		}
-		if (southExit != null) {
-			sb.append("south  ");
-		}
-		if (eastExit != null) {
-			sb.append("east  ");
-		}
-		if (westExit != null) {
-			sb.append("west  ");
-		}
+//		if (northExit != null) {
+//			sb.append("north  ");
+//		}
+//		if (southExit != null) {
+//			sb.append("south  ");
+//		}
+//		if (eastExit != null) {
+//			sb.append("east  ");
+//		}
+//		if (westExit != null) {
+//			sb.append("west  ");
+//		}
 		return sb.toString();
 	}
 
-	// Ö¸Áî×Ö¶ÎµÄÅĞ¶Ïº¯Êı
+	// æŒ‡ä»¤å­—æ®µçš„åˆ¤æ–­å‡½æ•°
 	public Room getExit(String direction) {
-		Room ret = null;
-		if (direction.equals("north")) {
-			ret = northExit;
-		}
-		if (direction.equals("east")) {
-			ret = eastExit;
-		}
-		if (direction.equals("south")) {
-			ret = southExit;
-		}
-		if (direction.equals("west")) {
-			ret = westExit;
-		}
+		Room ret=null;
+		ret = exits.get(direction);
+//		if (direction.equals("north")) {
+//			ret = northExit;
+//		}
+//		if (direction.equals("east")) {
+//			ret = eastExit;
+//		}
+//		if (direction.equals("south")) {
+//			ret = southExit;
+//		}
+//		if (direction.equals("west")) {
+//			ret = westExit;
+//		}
 		return ret;
 	}
 
-	// toStringµÄÊ¹ÓÃ
+	// toStringçš„ä½¿ç”¨
 	public String toString() {
 		return description;
 	}

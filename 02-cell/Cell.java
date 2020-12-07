@@ -1,6 +1,6 @@
 package cell;
 
-//Ï¸°ûÉú³ÉÆ÷
+//ç»†èƒç”Ÿæˆå™¨
 
 import java.awt.Graphics;
  

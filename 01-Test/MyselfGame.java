@@ -8,95 +8,119 @@ public class MyselfGame {
 	public MyselfGame() {
 		createRooms();
 	}
-		//´´½¨µØµã
+		//åˆ›å»ºåœ°ç‚¹
 	private void createRooms() {
 		Room northGate, southGate, expertTown, specialistBedroom, undergraduateBebroom, oneCanteen, turn1, turn2;
 		Room networkCollegeBuilding, undergraduateTeachingBuilding, Library, ManageteachingBuilding, crossroads4;
 		Room SkunkLake, basketballCourt, Playground, girlsBedroom, pioneerTown, crossroads1, crossroads2, crossroads3;
-		northGate = new Room("Èí´ó±±ÃÅ");
-		southGate = new Room("Èí´óÄÏÃÅ");
-		expertTown = new Room("ZJĞ¡Õò");
-		crossroads1 = new Room("Ê®×ÖÂ·¿Ú1");
-		specialistBedroom = new Room("×¨¿ÆËŞÉá");
-		undergraduateBebroom = new Room("±¾¿ÆËŞÉá");
-		crossroads2 = new Room("Ê®×ÖÂ·¿Ú2");
-		oneCanteen = new Room("Ò»Ê³ÌÃ");
-		networkCollegeBuilding = new Room("ÍøÂçÑ§Ôº½ÌÑ§Â¥");
-		undergraduateTeachingBuilding = new Room("±¾¿Æ½ÌÑ§Â¥");
-		crossroads3 = new Room("Ê®×ÖÂ·¿Ú3");
-		Library = new Room("Í¼Êé¹İ");
-		ManageteachingBuilding = new Room("¾­¹Ü½ÌÑ§Â¥");
-		crossroads4 = new Room("Ê®×ÖÂ·¿Ú4");
-		SkunkLake = new Room("³ôË®ºş");
-		basketballCourt = new Room("ÀºÇò³¡");
-		Playground = new Room("Ìï¾¶ÔË¶¯³¡");
-		turn1 = new Room("ÓÒÍäµÀ");
-		girlsBedroom = new Room("Å®ÉúËŞÉá");
-		turn2 = new Room("×óÍäµÀ");
-		pioneerTown = new Room("XFĞ¡Õò");
+		Room skycity,diyu;
+		skycity=new Room("å¤©ç©ºä¹‹åŸ");
+		diyu=new Room("åœ°ç‹±");
+		northGate = new Room("è½¯å¤§åŒ—é—¨");
+		southGate = new Room("è½¯å¤§å—é—¨");
+		expertTown = new Room("ZJå°é•‡");
+		crossroads1 = new Room("åå­—è·¯å£1");
+		specialistBedroom = new Room("ä¸“ç§‘å®¿èˆ");
+		undergraduateBebroom = new Room("æœ¬ç§‘å®¿èˆ");
+		crossroads2 = new Room("åå­—è·¯å£2");
+		oneCanteen = new Room("ä¸€é£Ÿå ‚");
+		networkCollegeBuilding = new Room("ç½‘ç»œå­¦é™¢æ•™å­¦æ¥¼");
+		undergraduateTeachingBuilding = new Room("æœ¬ç§‘æ•™å­¦æ¥¼");
+		crossroads3 = new Room("åå­—è·¯å£3");
+		Library = new Room("å›¾ä¹¦é¦†");
+		ManageteachingBuilding = new Room("ç»ç®¡æ•™å­¦æ¥¼");
+		crossroads4 = new Room("åå­—è·¯å£4");
+		SkunkLake = new Room("è‡­æ°´æ¹–");
+		basketballCourt = new Room("ç¯®çƒåœº");
+		Playground = new Room("ç”°å¾„è¿åŠ¨åœº");
+		turn1 = new Room("å³å¼¯é“");
+		girlsBedroom = new Room("å¥³ç”Ÿå®¿èˆ");
+		turn2 = new Room("å·¦å¼¯é“");
+		pioneerTown = new Room("XFå°é•‡");
 
-		// ·¿¼äµÄ³öÂ·
-		northGate.setExits(null, expertTown, null, null);
-		southGate.setExits(turn2, pioneerTown, null, null);
-		expertTown.setExits(northGate, crossroads1, null, null);
-		crossroads1.setExits(expertTown, crossroads2, undergraduateBebroom, specialistBedroom);
-		crossroads2.setExits(crossroads1, undergraduateTeachingBuilding, networkCollegeBuilding, oneCanteen);
-		undergraduateTeachingBuilding.setExits(crossroads2, crossroads3, null, null);
-		crossroads3.setExits(undergraduateTeachingBuilding, crossroads4, ManageteachingBuilding, Library);
-		crossroads4.setExits(crossroads3, Playground, SkunkLake, basketballCourt);
-		turn1.setExits(Playground, null, girlsBedroom, null);
-		turn2.setExits(null, southGate, null, turn1);
-		pioneerTown.setExits(southGate, null, null, null);
-		specialistBedroom.setExits(null, null, crossroads1, null);
-		undergraduateBebroom.setExits(null, null, null, crossroads1);
-		oneCanteen.setExits(null, null, crossroads2, null);
-		networkCollegeBuilding.setExits(null, null, null, crossroads2);
-		Library.setExits(null, null, crossroads3, null);
-		ManageteachingBuilding.setExits(null, null, null, crossroads3);
-		basketballCourt.setExits(null, null, crossroads4, null);
-		SkunkLake.setExits(null, null, null, crossroads4);
-		// ³öÉúµØµã
+		// æˆ¿é—´çš„å‡ºè·¯				åŒ—north  å—south  ä¸œeast  è¥¿west
+		northGate.setExit("south",expertTown);
+		southGate.setExit("north",turn2);
+		southGate.setExit("south",pioneerTown);
+		expertTown.setExit("north",northGate);
+		expertTown.setExit("south",crossroads1);
+		crossroads1.setExit("north",expertTown);
+		crossroads1.setExit("south",crossroads2);
+		crossroads1.setExit("east",undergraduateBebroom);
+		crossroads1.setExit("weat",specialistBedroom);
+		crossroads2.setExit("north",crossroads1);
+		crossroads2.setExit("south",undergraduateTeachingBuilding);
+		crossroads2.setExit("east",networkCollegeBuilding);
+		crossroads2.setExit("west",oneCanteen);
+		undergraduateTeachingBuilding.setExit("north",crossroads2);
+		undergraduateTeachingBuilding.setExit("south",crossroads3);
+		undergraduateTeachingBuilding.setExit("up",skycity);
+		undergraduateTeachingBuilding.setExit("down",diyu);
+		skycity.setExit("down", undergraduateTeachingBuilding);
+		diyu.setExit("up", undergraduateTeachingBuilding);
+		crossroads3.setExit("north",undergraduateTeachingBuilding);
+		crossroads3.setExit("south",crossroads4);
+		crossroads3.setExit("east",ManageteachingBuilding);
+		crossroads3.setExit("west",Library);
+		crossroads4.setExit("north",crossroads3);
+		crossroads4.setExit("south",Playground);
+		crossroads4.setExit("east",SkunkLake);
+		crossroads4.setExit("west",basketballCourt);
+		turn1.setExit("north",Playground);
+		turn1.setExit("east",girlsBedroom);
+		turn2.setExit("south", southGate);
+		turn2.setExit("west",turn1);
+		pioneerTown.setExit("north",southGate);
+		specialistBedroom.setExit("east",crossroads1);
+		undergraduateBebroom.setExit("west", crossroads1);
+		oneCanteen.setExit("east",crossroads2);
+		networkCollegeBuilding.setExit("west", crossroads2);
+		Library.setExit("east",crossroads3);
+		ManageteachingBuilding.setExit("west", crossroads3);
+		basketballCourt.setExit("east",crossroads4);
+		SkunkLake.setExit("west", crossroads4);
+		// å‡ºç”Ÿåœ°ç‚¹
 		currentRoom = undergraduateTeachingBuilding; 
 
 	}
 	
-		//·¿¼ä³ö¿Ú
+		//æˆ¿é—´å‡ºå£
 	private void goRoom(String direction) {
 		Room nextroom = currentRoom.getExit(direction);
 		if (nextroom == null) {
-			System.out.println("ÄÇÀïÃ»ÓĞÃÅ");
+			System.out.println("é‚£é‡Œæ²¡æœ‰é—¨");
 		} else {
 			currentRoom = nextroom;
 			newStand();
 		}
 	}
 
-		//ÏàĞÅ¿´µÃ¶®
+		//ç›¸ä¿¡çœ‹å¾—æ‡‚
 	public void printWelcome() {
 		System.out.println();
-		System.out.println("»¶Ó­À´µ½Èí´óÑ§£¬Ï£ÍûÄãÈ¡µÃÓÅÒìµÄ³É¼¨¡£");
-		System.out.println("Äã¿ÉÒÔÈ¥ÍùÈÎºÎµØ·½£¬Ö»ÒªÄãÊäÈëÏàÓ¦µÄÖ¸Áî£º");
-		System.out.println("ÀıÈç£ºÄãÏëÒªÈ¥Î÷±ß£¬ÊäÈë£º	go west");
-		System.out.println("ÈçĞè°ïÖú£¬ÇëÊäÈë:	help");
+		System.out.println("æ¬¢è¿æ¥åˆ°è½¯å¤§å­¦ï¼Œå¸Œæœ›ä½ å–å¾—ä¼˜å¼‚çš„æˆç»©ã€‚");
+		System.out.println("ä½ å¯ä»¥å»å¾€ä»»ä½•åœ°æ–¹ï¼Œåªè¦ä½ è¾“å…¥ç›¸åº”çš„æŒ‡ä»¤ï¼š");
+		System.out.println("ä¾‹å¦‚ï¼šä½ æƒ³è¦å»è¥¿è¾¹ï¼Œè¾“å…¥ï¼š	go west");
+		System.out.println("å¦‚éœ€å¸®åŠ©ï¼Œè¯·è¾“å…¥:	help");
 		newStand();
 		System.out.println();
 	}
 
-		//³öÉúµØÒÔ¼°³ö¿Ú
+		//å‡ºç”Ÿåœ°ä»¥åŠå‡ºå£
 	public void newStand() {
-		System.out.println("ÏÖÔÚÄãÔÚ" + currentRoom);
-		System.out.print("³ö¿ÚÓĞ: ");
+		System.out.println("ç°åœ¨ä½ åœ¨" + currentRoom);
+		System.out.print("å‡ºå£æœ‰: ");
 		System.out.println(currentRoom.getExitdesc());
 		System.out.println();
 	}
 
-		//help×Ö¶Îº¯Êı
+		//helpå­—æ®µå‡½æ•°
 	private void printhelp() {
-		System.out.println("ÃÔÂ·ÁËÂğ£¬Äã¿ÉÒÔ×öµÄÃüÁîÓĞ£ºgo bye help");
-		System.out.println("Èç£º\tgo east");
+		System.out.println("è¿·è·¯äº†å—ï¼Œä½ å¯ä»¥åšçš„å‘½ä»¤æœ‰ï¼šgo bye help");
+		System.out.println("å¦‚ï¼š\tgo east");
 	}
 
-	// Ê×ÏÈ½øĞĞÕËºÅÃÜÂëµÇÂ¼
+	// é¦–å…ˆè¿›è¡Œè´¦å·å¯†ç ç™»å½•
 	private String[] Xbox = { "1234567", "7654321" };
 
 	public boolean Username(String username) {
@@ -113,11 +137,11 @@ public class MyselfGame {
 		String username;
 		String password;
 		int i = 0;
-		System.out.println("ÌáÊ¾£ºÕËºÅË³Ğò1~7£¬ÃÜÂëµ¹Ğò1~7");
+		System.out.println("æç¤ºï¼šè´¦å·é¡ºåº1~7ï¼Œå¯†ç å€’åº1~7");
 		do {
-			System.out.println("ÕËºÅ£º");
+			System.out.println("è´¦å·ï¼š");
 			username = in.next();
-			System.out.println("ÃÜÂë£º");
+			System.out.println("å¯†ç ï¼š");
 			password = in.next();
 			i++;
 			if (mg.Username(username)) {
@@ -128,7 +152,7 @@ public class MyselfGame {
 					System.out.println("-----------------------");
 				}
 			} else {
-				System.out.println("Error,please try £º");
+				System.out.println("Error,please try ï¼š");
 				System.out.println("-----------------------");
 			}
 			if (i >= 3) {
@@ -147,11 +171,11 @@ public class MyselfGame {
 				mg.goRoom(words[1]);
 			}
 			if (words[0].equals("bye")) {
-				System.out.println("Ï£ÍûÕâÌËÂÃĞĞÄÜ¹»ÈÃÄãÑ§µ½Ò»Ğ©¶«Î÷£¬ºÃºÃÑ§Ï°£¬²»È»¾ÍÒªÀ´ÕâÖÖÑ§Ğ££¡£¡£¡");
+				System.out.println("å¸Œæœ›è¿™è¶Ÿæ—…è¡Œèƒ½å¤Ÿè®©ä½ å­¦åˆ°ä¸€äº›ä¸œè¥¿ï¼Œå¥½å¥½å­¦ä¹ ï¼Œä¸ç„¶å°±è¦æ¥è¿™ç§å­¦æ ¡ï¼ï¼ï¼");
 				break;
 			}
 		}
-		System.out.println("¸ĞĞ»ÄúµÄ¹âÁÙ£¬ÔÙ¼û£¡");
+		System.out.println("æ„Ÿè°¢æ‚¨çš„å…‰ä¸´ï¼Œå†è§ï¼");
 		in.close();
 
 	}
