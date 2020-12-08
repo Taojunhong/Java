@@ -1,4 +1,4 @@
-package Java01.ShangKe;
+package Java01_UpClass;
 
 public class Students extends Arrived {
 
